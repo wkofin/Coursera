@@ -9,7 +9,6 @@ makeCacheMatrix <- function(x = matrix()) { # create a function which starts wit
         getinv <- function() { m } # gets the inverse matrix 
         list(set = set, get = get, setinv = setinv, getinv = getinv) # passes the value of the function makeCacheMatrix  
 }
-
 cacheSolve <- function(x, ...) { # the input x is an object created by makeCacheMatrix
         m <- x$getinv() # acesses the object 'x' and gets the inverse matrix
         if(!is.null(m)) {
